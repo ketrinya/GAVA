@@ -414,7 +414,7 @@ nav li.active a {
 /* === SLOGAN === */
 .slogan{
     --padding_percentage:10vh;
-    background: url('src/images/jpeg/drons.jpg');
+    background-image: url('src/images/jpeg/drons.jpg');
     background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1)); 
     background-attachment: fixed;
     background-size: cover;
@@ -581,11 +581,12 @@ h1.secondary_title {
   .gallery_content {
     column-count: 2;
     column-gap: 1em;
+    column-fill: balance;
   }
   
   .gallery_content img {
     width: 100%;
-    margin-bottom: 1em;
+    margin: 0 0 1rem 0;
     border-radius: 6px;
     display: block;
     break-inside: avoid;
@@ -900,7 +901,7 @@ h1.secondary_title {
         column-count: 2; 
       }
 }
-@media (min-width: 560px) {
+@media (min-width: 580px) {
     .gallery_content {
         column-count: 3; 
       }
