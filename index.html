@@ -30,7 +30,7 @@
             <span aria-hidden="true"></span>
           </button>
           
-          <nav class="nav" id="nav" aria-label="Головне меню">
+          <nav class="nav fade_in_animation" id="nav" aria-label="Головне меню">
             <ul>
               <li><a href="#slogan">Головна</a></li>
               <li><a href="#about">Про нас</a></li>
@@ -44,22 +44,13 @@
 
 <main class="main">
     <section id="slogan" class="slogan" tabindex="-1"> 
-        <div class="wrapper">
-            <div class="slogan_content scroll_animation">
-                <h1 class="secondary_title" id="slogan_title">Крила, що змінюють хід бою.</h1>
-                <div aria-labelledby="slogan_title">
-                  <p>Дрони, що допомагають бачити більше та діяти швидше. Народжені з досвіду війни та віри в перемогу. Технології, заргартовані на передовій. Наша турбота про тих, хто тримає небо й землю України.</p>
-                  <a id="btn_slogan" href="#gallery" class="btn btn-secondary" aria-label="Перейти до фотогалереї">Дрони</a>
-                </div>
-                
-            </div>
-        </div>
+        <h1 id="slogan_title" class="slide_up_animation"><span>крила, що змінюють хід бою</span></h1>
     </section>
 
     <section id="about" tabindex="-1" class="about">
       <div class="wrapper">
         <div class="about_content">
-            <h2 class="about_title primary_title scroll_animation"  id="about_title">Історії які рятують життя</h2>
+            <h2 class="about_title primary_title scroll_animation"  id="about_title">Рятуючи життя життя</h2>
             <div class="about_description"  aria-labelledby="about_title">
               <p class="scroll_animation">Ця історія почалась не з креслень і не з бізнес-плану. Вона почалась на передовій — там, де щодня приймають рішення між життям і смертю. Бажання бути корисними, підтримати побратимів і зробити свій внесок у перемогу не давало спокою. Так народилась ідея: збирати дрони.</p>
               <p class="scroll_animation">Ми знаємо, що їм потрібно. Бо самі були там. Ми не просто робимо крила — ми створюємо надійного помічника для тих, хто стоїть на захисті нашої землі та наших родин. Кожен дрон — це результат досвіду, віри та відповідальності перед тими, хто воює сьогодні.</p>
@@ -67,7 +58,7 @@
             </div>
             <div class="btn_wrp scroll_animation"><a href="#contacts" class="btn btn-primary" aria-label="Перейти до контактів">Зв'язатись з нами</a></div>
         </div>
-        <div class="about_img scroll_animation" aria-hidden="true">
+        <div class="about_img aria-hidden="true">
             <div class="about_photo_stack">
               <img src="src/images/png/box.png" alt="фото в стеку 1">
               <img src="src/images/png/ChatGPT_Image.png" alt="фото в стеку 2"> 
@@ -79,7 +70,7 @@
       </div>
     </section>
 
-    <section id="advantages" class="advantages" tabindex="-1">
+    <section id="advantages" class="advantages parallax_bg" tabindex="-1">
       <div class="wrapper">
         
         <div class="advantages_content">
@@ -169,7 +160,7 @@
 </main>
 
 <footer class="footer">
-      <p class="copyright">© 2025 by <span>"GAVA"</span></p>
+      <div class="copyright">© 2025 by <span>"GAVA"</span></div>
 </footer>
 </body>
 
