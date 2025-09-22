@@ -157,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  
   const skipLink = document.querySelector('.skip-link');
   if (skipLink) {
     const target = document.getElementById('btn_slogan');
@@ -185,21 +184,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-   const parallaxBlocks = document.querySelectorAll(".parallax-bg");
-
-  window.addEventListener("scroll", () => {
-    parallaxBlocks.forEach(block => {
-      const rect = block.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const scrolled = windowHeight - rect.top;
-        const offset = scrolled * 0.2; // швидкість паралаксу
-        block.style.setProperty("--parallax", offset + "px");
-      }
-    });
-  });
-
 
 });

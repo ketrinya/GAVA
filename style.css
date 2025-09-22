@@ -285,20 +285,6 @@ header .wrapper {
   padding-block: 0;
 }
 
-/* .logo {
-  display: block;
-  width: 3rem;
-  position: relative;
-  z-index: 8;
-  transform: scale(1.7) rotate(13deg) translate(1.5em, -0.4em);
-  transition: transform 0.5s ease, filter 0.5s ease;
-  font-size: var(--fs--10);
-  color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
-  text-decoration: none;
-  line-height: 1.3;
-} */
-
-
 .logo {
   display: block;
   width: 3rem;
@@ -310,9 +296,7 @@ header .wrapper {
   color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
   text-decoration: none;
   line-height: 1.3;
-
 }
-
 
 .logo img {
   filter: drop-shadow(0 0 2px hsla(0, 0%, 0%, 1)) brightness(1);
@@ -443,12 +427,6 @@ nav li.active a {
 
 /* === SLOGAN === */
 .slogan{
-      background-image: url(src/images/jpeg/drons.jpg);
-    background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 40vh;
     display: flex;
     align-items: flex-end;
@@ -457,6 +435,26 @@ nav li.active a {
     font-size: var(--fs-base);
     box-shadow: inset 1px 1px 5rem hsla(var(--clr-primary-hsl-dark), var(--opacity-07));
   }
+
+.slogan::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0; 
+  transition: opacity 0.5s ease;
+}
+
+.slogan::before {
+  background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
+  background-image: url(src/images/jpeg/drons.jpg);
+  opacity: 1;
+}
 
  #slogan_title {
   position: relative;
@@ -482,10 +480,10 @@ nav li.active a {
 }
 
 
-
 /* === ABOUT === */
 .about{
     border-top: 1px solid hsla(var(--clr-primary-hsl-dark), var(--opacity-03));
+    background-color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
 }
 
 .about .wrapper {
@@ -538,15 +536,12 @@ nav li.active a {
 .advantages {
     background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
     background-image: url('src/images/png/bg.png');
-    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: 0;
+    background-repeat: no-repeat; 
     box-shadow: inset 1rem 1rem 21rem hsla(var(--clr-primary-hsl-dark), var(--opacity-07));
   }
-
-
-
+ 
 .advantages .wrapper {
     display: flex;
     flex-direction: column;
@@ -599,7 +594,9 @@ nav li.active a {
 
 /* === GALLERY === */
 .gallery{
-    background: url(src/images/svg/Black_logo_1.svg) repeat;
+    background-color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
+    background-image: url(src/images/svg/Black_logo_1.svg) ;
+    background-repeat: repeat;
     background-size: 3rem;
     border-bottom: 3px solid hsla(var(--clr-primary-hsl-dark), var(--opacity-1));
 }
@@ -626,6 +623,10 @@ nav li.active a {
   }
 
 /* === CONTACTS === */
+.contacts{
+    background-color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
+}
+
 .contacts_content {
     display: flex;
      flex-direction: column;
