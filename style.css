@@ -142,6 +142,9 @@ p{
   margin-bottom: 1rem;
   text-indent: 1rem;
 }
+p:last-child{
+  margin-bottom: 0;
+}
 
 img {
   max-width: 100%;
@@ -158,7 +161,7 @@ body {
   margin: 0;
   font-family: var(--ff-base);
   color: var(--clr-txt-dark);
-  background-color:  hsla(var(--clr-primary-hsl-dark), var(--opacity-07));
+  background-color:  hsla(var(--clr-primary-hsl-dark),  var(--opacity-1));
   font-size: var(--fs-base);
   font-weight: var(--fw-regular);
   line-height: var(--lh-base);
@@ -369,9 +372,9 @@ nav li.active a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
-    width: 30px;
-    height: 30px;
+    gap: 7px;
+    width: 35px;
+    height: 35px;
     background: none;
     border: none;
     cursor: pointer;
@@ -380,9 +383,9 @@ nav li.active a {
 
 .burger span {
     display: block;
-    height: 3px;
+    height: 4px;
     background-color: var(--clr-txt-light, #fff);
-    border-radius: 2px;
+    border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
     box-shadow: 1px 1px 2px black;
 }
@@ -391,7 +394,7 @@ nav li.active a {
 }
 
 .burger.open span:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(11px) rotate(45deg);
 }
 
 .burger.open span:nth-child(2) {
@@ -399,7 +402,7 @@ nav li.active a {
 }
 
 .burger.open span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-11px) rotate(-45deg);
 }
 
 /* === Skip link styling === */
@@ -480,7 +483,7 @@ nav li.active a {
 }
 
 .about_description {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .about_img {
@@ -564,11 +567,17 @@ nav li.active a {
     background-size: contain;
   }
 
+  .advantages_list span{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-base);
+  }
+
 .advantages_content {
     background-color: hsla(var(--clr-primary-hsl-dark), var(--opacity-06));
     border-radius: 0.3rem;
     box-shadow: 2px 2px 5px hsla(var(--clr-primary-hsl-dark), var(--opacity-03));
     padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .advantages_description {
@@ -1031,6 +1040,7 @@ nav li.active a {
         display: flex;
         flex-direction: column;
         justify-content: center; 
+        margin-bottom: 0;
       }
 
       .advantages_content,
