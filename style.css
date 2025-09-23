@@ -302,6 +302,9 @@ header .wrapper {
   color: hsla(var(--clr-secondary-hsl-light), var(--opacity-1));
   text-decoration: none;
   line-height: 1.3;
+  border: 1px solid hsla(var(--clr-primary-hsl-dark), var(--opacity-03));
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
 }
 
 .logo img {
@@ -309,7 +312,6 @@ header .wrapper {
   background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
   box-shadow: inset 0 0 1em hsla(var(--clr-primary-hsl-dark), var(--opacity-07));
   padding: 0.2rem;
-  border-radius: 0 0 5px 5px;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
