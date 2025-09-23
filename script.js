@@ -185,4 +185,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
+// Masonry gallery
+function masonryLayout() {
+  const gallery = document.querySelector('.gallery_content');
+  const rowHeight = parseInt(getComputedStyle(gallery).gridAutoRows);
+  const gap = parseInt(getComputedStyle(gallery).gap);
+
+  const imgs = gallery.querySelectorAll('img');
+  imgs.forEach(img => {
+    const rowSpan = Math.ceil((img.offsetHeight + gap) / (rowHeight + gap));
+    img.style.gridRowEnd = `span ${rowSpan}`;
+  });
+}
+
+window.addEventListener('load', masonryLayout);
+window.addEventListener('resize', masonryLayout);
+
 });
