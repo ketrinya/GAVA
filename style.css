@@ -315,15 +315,6 @@ header .wrapper {
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
-.logo:hover {
-  transform: scale(1.7) rotate(13deg) translate(1.5em, 0em);
-}
-
-.logo:hover img {
-  transform: translateY(0.1em);
-  box-shadow: inset 0 0 0.5em hsla(var(--clr-primary-hsl-dark), var(--opacity-05));
-}
-
 /* === NAVIGATION === */
 nav {
     overflow: hidden;
@@ -398,13 +389,6 @@ nav li.active a {
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
     box-shadow: 1px 1px 2px black;
-}
-.burger:hover span {
-    background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
-}
-
-.burger:focus span {
-  background-color: var(--clr-txt-light, var(--clr-white));
 }
 
 .burger.open span:nth-child(1) {
@@ -977,6 +961,22 @@ nav li.active a {
   .slogan  {
     height: 60vh;
   }
+}
+ 
+ /* === Hover effects (desktop only) === */
+@media (hover: hover) and (pointer: fine) {
+  .logo:hover {
+    transform: scale(1.7) rotate(13deg) translate(1.5em, 0em);
+  }
+
+  .logo:hover img {
+    transform: translateY(0.1em);
+    box-shadow: inset 0 0 0.5em hsla(var(--clr-primary-hsl-dark), var(--opacity-05));
+  }
+
+  .burger:hover span {
+    background-color: hsla(var(--clr-primary-hsl-light), var(--opacity-1));
+}
 }
 
 /* === Tablets === */
